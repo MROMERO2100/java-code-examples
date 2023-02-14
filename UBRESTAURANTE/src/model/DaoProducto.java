@@ -219,6 +219,7 @@ public class DaoProducto {
         return existe;
     }//FUNCION PARA MANDAR A VERIFICAR SI YA EXISTE EL NOMBRE DEL PRODUCTO.
     
+    //FUNCION PARA VERFICAR CUANTOS PRODUCTOS ACTIVOS HAY ACTUALMENTE.
         public int GetCountProd(int PRODIDCOMP) {
         int CountProd = 0;
         try {
@@ -234,9 +235,9 @@ public class DaoProducto {
             System.out.println("Error Obteniedo Ultimo ID de Mesa: " + e.getMessage());
         }
         return CountProd;
-    }
+    }//FIN DE FUNCION PARA VERFICAR CUANTOS PRODUCTOS ACTIVOS HAY ACTUALMENTE.
 
-    //FUNCION PARA RECOGER LOS DATOS 'IBCATTYPPROD' TABLA TIPO DE CATEGORIAS
+    //FUNCION PARA RECOGER LOS DATOS DE LA TABLA PRODUCTO
     public boolean GetDataProd(int PRODIDCOMP, int PRODID) {
         PRODIDUNIT = 0;//VARCHAR(50) NOT NULL COMMENT 'ID UNIDAD DE MEDIDA',
         PRODTIPO = "";//TIPO PRODUCTO: B:BIENES; S:SERVICIO
@@ -355,6 +356,6 @@ public class DaoProducto {
             System.out.println("Error: " + e.getMessage());
         }
         return existe;
-    }//FIN DE FUNCION PARA RECOGER LOS DATOS 'IBCATTYPPROD' TABLA TIPO DE CATEGORIAS
+    }//FIN DE FUNCION PARA RECOGER LOS DATOS DE LA TABLA PRODUCTO
 
 }
